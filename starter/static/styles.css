@@ -9,6 +9,8 @@
     --grid-border: #bbb;
     --strong-border: #333;
     --cell-background: #fafafa;
+    --box-shade-background: #eeeeee;
+    --box-plain-background: #ede7f6;
     --cell-focus: #e0f7fa;
     --prefilled-background: #e0e0e0;
     --hinted-background: #d1c4e9;
@@ -34,6 +36,8 @@
     --grid-border: #697482;
     --strong-border: #e5e7eb;
     --cell-background: #20262e;
+    --box-shade-background: #3f4852;
+    --box-plain-background: #4c3b68;
     --cell-focus: #164e63;
     --prefilled-background: #3b4652;
     --hinted-background: #51406d;
@@ -167,12 +171,19 @@ h1 {
     transition: background 0.2s;
 }
 
+.sudoku-cell.box-shade {
+    background: var(--box-shade-background);
+}
+
+.sudoku-cell.box-plain {
+    background: var(--box-plain-background);
+}
+
 .sudoku-cell:focus {
     background: var(--cell-focus);
 }
 
 .sudoku-cell.prefilled {
-    background: var(--prefilled-background);
     font-weight: bold;
     color: var(--text);
 }
